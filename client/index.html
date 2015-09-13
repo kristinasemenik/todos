@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>TODOs 3.0 Ajax basics demo application</title>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="css/lib/bootstrap.css"/>	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/todo.css"/>
+    <script src="js/todo.js"></script>
+	
+</head>
+
+<body onload="run();">
+<div class="container-fluid app-container main">
+    <div style="float:left; width:50%;">
+        <div class="header">
+            <h1>TODOs 3.0<br/></h1>
+            <small>Ajax, демонстрационное приложение</small>
+        </div>
+        <section class="todos">
+            <div class="input form-inline">
+                	
+			<div class="dropdown">
+				<button class="checkbox dropdown-toggle" type="button" data-toggle="dropdown" id="show">				
+							filter &#9660;</button>
+					<ul class="dropdown-menu">
+					 <li><label><input type="button" id="realized" >Выполненные</button></label></li>
+					 <li><label><input type="button" id="not_realized" >Невыполненные</button></label></li>
+					 <li><label><input type="button" id="all">Все</button></label></li>
+					</ul>
+				<input id="filter_substring" type="text" class="form-control todo-input" placeholder="Кого ищем ?">
+                <button id="searchButton" type="button" class="btn btn-primary btn-add">Фас!</button>
+				
+			</div>
+			<input id="todoText" type="text" class="form-control todo-input" placeholder="Какие планы ?">
+                <button id="addButton" type="button" class="btn btn-primary btn-add">Добавить</button>
+				
+            </div>
+            <hr>
+			<script>
+				$("input[type='checkbox']").prop({
+				disabled: true
+				});
+			</script>
+            <div class="items"></div>
+            <hr>
+            <div class="nav">Всего /выполнено /осталось: <p><span class="counter-holder">0</span>/ <span class="checked-holder">0</span> / <span class="left-holder">0</span> задач</p></div>
+        </section>		
+        <div class="footer text-right">
+            <small>Edited by Kristina for Exadel © 2015</small>
+        </div>
+    </div>
+    <pre id="output" style="float:right; width:50%;">
+    </pre>
+</div>
+</body>
+</html> 
