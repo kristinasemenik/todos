@@ -68,14 +68,16 @@ function onAddButtonClick(){
 	});
 } 
 //-----------------------
-function onSearchButtonClick(){
+function onsearchButtonClick(){
 	var searchText = document.getElementById('filter_substring');
 	var search_query=searchText.value;
 	
-	if(searchText.value == '')
-		return;
-	searchText.value = '';	
-	$('');
+	//if(searchText.value == '')
+	//	return;		
+			
+	$('.item').hide();
+	$('.item:contains('+search_query+')').show();
+	searchText.value = '';
 	
 }
 /*$(document).ready(function () {   
