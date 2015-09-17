@@ -19,33 +19,34 @@
             <small>Ajax, демонстрационное приложение</small>
         </div>
         <section class="todos">
-            <div class="input form-inline">
+            <div class="input form-inline"  style="display: inline-block">
                 	
 			<div class="dropdown">
-				<button class="checkbox dropdown-toggle" type="button" data-toggle="dropdown" id="show">				
+				<button class="btn btn-info" type="button" data-toggle="dropdown" id="show">				
 							filter &#9660;</button>
-					<ul class="dropdown-menu">
-					 <li><label><input type="button" id="realized" >Выполненные</button></label></li>
+					<ul class="dropdown-menu" >
+					 <li><label><input type="button"  id="realized" >Выполненные</button></label></li>
 					 <li><label><input type="button" id="not_realized" >Невыполненные</button></label></li>
 					 <li><label><input type="button" id="all">Все</button></label></li>
-					</ul>
-				<input id="filter_substring" type="text" class="form-control todo-input" placeholder="Кого ищем ?">
-                <button id="searchButton" type="button" class="btn btn-primary btn-add" onClick="onsearchButtonClick()">Фас!</button>
-				
+					</ul>				
 			</div>
-			<input id="todoText" type="text" class="form-control todo-input" placeholder="Какие планы ?">
-                <button id="addButton" type="button" class="btn btn-primary btn-add">Добавить</button>
+			<div style="width:100%">
+				<div style="float:left; width:50%">
+					<input id="todoText" type="text" class="form-control todo-input" placeholder="Какие планы ?">
+					<button id="addButton" type="button" class="btn btn-primary btn-add">Добавить</button>
+				</div>
 				
-            </div>
+				<div style="float:left; width:50%">
+					<input id="filter_substring" type="text" class="form-control todo-input" placeholder="Кого ищем ?">
+					<button id="searchButton" type="button" class="btn btn-primary btn-add" onClick="onsearchButtonClick()">Фас!</button>
+				</div>	
+			</div>			
+            </div>			
             <hr>
-			<script>
-				$("input[type='checkbox']").prop({
-				disabled: true
-				});
-			</script>
+						
             <div class="items"></div>
             <hr>
-            <div class="nav">Всего /выполнено /осталось: <p><span class="counter-holder">0</span>/ <span class="checked-holder">0</span> / <span class="left-holder">0</span> задач</p></div>
+            <div class="nav">Всего /выполнено /осталось: <p><span class="counter-holder">0</span>/ <span class="checked-holder" style= "color:#0CF100 ">0</span> / <span class="left-holder" style= "color:#FF0D00 ">0</span> задач</p></div>
         </section>		
         <div class="footer text-right">
             <small>Edited by Kristina for Exadel © 2015</small>
